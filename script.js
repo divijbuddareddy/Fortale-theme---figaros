@@ -55,7 +55,7 @@ const observer = new IntersectionObserver(entries => {
 });
 
 const elements = document.querySelectorAll(
-  '.apartment-card, .feature-box, .stay-card, .address-box, .contact-box'
+  '.apartment-card, .feature-box, .stay-card, .location-card'
 );
 
 elements.forEach(el => {
@@ -67,23 +67,5 @@ elements.forEach(el => {
   el.style.transition = 'all 0.8s ease';
 
   observer.observe(el);
-
-});
-
-// NAVBAR SHADOW ON SCROLL
-
-window.addEventListener('scroll', () => {
-
-  const navbar = document.querySelector('.navbar');
-
-  if(window.scrollY > 50){
-
-    navbar.style.boxShadow = '0 8px 24px rgba(0,0,0,0.12)';
-
-  }else{
-
-    navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.04)';
-
-  }
 
 });
